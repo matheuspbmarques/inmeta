@@ -1,0 +1,3 @@
+export const PROVIDE = {
+  DATABASE: 'DATABASE_CONNECTION',
+};
