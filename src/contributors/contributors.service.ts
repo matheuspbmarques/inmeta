@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { CreateContributorDto } from './dtos/create-contributor.dto';
 import { Contributor } from './contributor.interface';
-import { PROVIDE } from '../../utils/constants';
+import { PROVIDE } from '../utils/constants';
 import { Model } from 'mongoose';
 
 @Injectable()

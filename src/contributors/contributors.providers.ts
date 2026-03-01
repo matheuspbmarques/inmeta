@@ -1,5 +1,5 @@
 import { Provider } from '@nestjs/common';
-import { PROVIDE } from '../../utils/constants';
+import { PROVIDE } from '../utils/constants';
 import { Connection } from 'mongoose';
 import { ContributorSchema } from './contributor.schema';
 

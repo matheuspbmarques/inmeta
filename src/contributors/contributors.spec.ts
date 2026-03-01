@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { ContributorsController } from './contributors.controller';
 import { ContributorsService } from './contributors.service';
 import { contributorsProviders } from './contributors.providers';
-import { DatabaseModule } from '../../services/database/database.module';
+import { DatabaseModule } from '../database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import mongoose from 'mongoose';
 

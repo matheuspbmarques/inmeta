@@ -1,5 +1,5 @@
 import mongoose, { Mongoose } from 'mongoose';
-import { PROVIDE } from '../../utils/constants';
+import { PROVIDE } from '../utils/constants';
 import { Provider } from '@nestjs/common';
 
 export const databaseProviders: Array<Provider> = [
