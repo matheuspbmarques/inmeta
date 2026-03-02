@@ -6,5 +6,6 @@ import { contributorsProviders } from './contributors.providers';
 @Module({
   controllers: [ContributorsController],
   providers: [ContributorsService, ...contributorsProviders],
+  exports: [ContributorsService],
 })
 export class ContributorsModule {}

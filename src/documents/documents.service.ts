@@ -3,18 +3,18 @@ import { AddDocumentDto } from './dtos/add-document.dto';
 import { PROVIDE } from 'src/utils/constants';
 import { Model } from 'mongoose';
 import { Document } from './document.interface';
+import { ContributorsService } from 'src/contributors/contributors.service';
 
 @Injectable()
 export class DocumentsService {
   constructor(
     @Inject(PROVIDE.DOCUMENT) private readonly documentModel: Model<Document>,
-    @Inject(PROVIDE.CONTRIBUTOR)
-    private readonly contributorModel: Model<Document>,
+    private readonly contributorService: ContributorsService,
   ) {}
 
   public async addDocument(addDocumentDto: AddDocumentDto): Promise<Document> {
-    const contributorExists = await this.contributorModel.exists({
-      _id: addDocumentDto.contributorId,
+    const contributorExists = await this.contributorService.findOneContributor({
+      id: addDocumentDto.contributorId.toString(),
     });
 
     if (!contributorExists) {

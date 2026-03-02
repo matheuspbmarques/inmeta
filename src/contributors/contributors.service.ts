@@ -3,6 +3,7 @@ import { CreateContributorDto } from './dtos/create-contributor.dto';
 import { Contributor } from './contributor.interface';
 import { PROVIDE } from '../utils/constants';
 import { Model } from 'mongoose';
+import { FindOneContributorDto } from './dtos/find-one-contributor.dto';
 
 @Injectable()
 export class ContributorsService {
@@ -17,5 +18,11 @@ export class ContributorsService {
     const createdContributor = new this.contributorModel({ name });
 
     return createdContributor.save();
+  }
+
+  public async findOneContributor({
+    id,
+  }: FindOneContributorDto): Promise<Contributor | null> {
+    return this.contributorModel.findById(id);
   }
 }
