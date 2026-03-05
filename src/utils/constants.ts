@@ -4,7 +4,7 @@ export const PROVIDE = {
   DOCUMENT: 'DOCUMENT_MODEL',
 };
 
-export const DOCUMENT_TYPES = ['cpf', 'certidao', 'aso'];
+export const DOCUMENT_TYPES = ['cpf', 'certidao', 'aso'] as const;
 
 export const MODEL = {
   CONTRIBUTOR: 'Contributor',
