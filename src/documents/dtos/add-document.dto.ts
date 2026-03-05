@@ -1,6 +1,6 @@
 import { Types } from 'mongoose';
 import { IsEnum, IsMongoId } from 'class-validator';
-import { DOCUMENT_TYPES } from 'src/utils/constants';
+import { DOCUMENT_TYPES } from '../../utils/constants';
 
 export class AddDocumentDto {
   @IsMongoId()

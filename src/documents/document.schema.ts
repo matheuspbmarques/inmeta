@@ -1,6 +1,6 @@
 import { Schema } from 'mongoose';
 import { Document } from './document.interface';
-import { DOCUMENT_TYPES, MODEL } from 'src/utils/constants';
+import { DOCUMENT_TYPES, MODEL } from '../utils/constants';
 
 export const DocumentSchema = new Schema<Document>(
   {
